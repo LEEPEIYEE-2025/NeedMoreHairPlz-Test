@@ -11,6 +11,7 @@ This is a general guide for working on projects collaboratively.
     - https://www.freecodecamp.org/news/git-and-github-workflow-for-open-source/
 - How to write Git commit messages
     - https://cbea.ms/git-commit/
+- Example: This [repo](https://github.com/nvbn/thefuck/commits/master/) has good and pretty commit messages.
 
 ## How to Handle Bugs and Issues
 - Google search the problem. We'll find oficial documentations, forums, and articles related to our issues.
