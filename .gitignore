@@ -1,0 +1,21 @@
+# java compiled files
+*.class
+*.jar
+
+# outputs
+out/
+
+# saves
+data/
+
+# IntelliJ config
+.idea/
+
+# iml
+*.iml
+
+# tokens
+.env
+
+# custom
+ignore/
