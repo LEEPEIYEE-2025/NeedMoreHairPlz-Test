@@ -11,6 +11,8 @@ import java.util.UUID;
  * Represent a user session.
  */
 public final class Session {
+    private Session() {}
+
     private static User currentUser = null;
 
     /**
@@ -100,8 +102,8 @@ public final class Session {
      * Create and save entry for the current logged user.
      * @param date the date for this entry. type of LocalDate
      * @param content string of content for this entry
-     * @param mood "positive" or "negative". call TODO: Implement get mood method
-     * @param weather string representing weather (Sunny, Rainy, Hazy, Thunderstorms). hint: call Weather.getCurrentWeather
+     * @param mood "Very Positive", "Positive", "Neutral", "Negative", or "Very Negative". hint: call MoodAnalyzer.analyze(content)
+     * @param weather "Sunny", "Rainy", "Hazy", or "Thunderstorms". hint: call Weather.getCurrentWeather
      */
     public static void createEntry(LocalDate date, String content, String mood, String weather) {
         currentUser.getEntries().createEntry(date, content, mood, weather);
@@ -120,13 +122,16 @@ public final class Session {
      * @param id the unique id for that entry
      * @param date the date for that entry. type of LocalDate
      * @param content string of content for that entry
-     * @param mood "positive" or "negative". call TODO: Implement get mood method
-     * @param weather string representing weather (Sunny, Rainy, Hazy, Thunderstorms). hint: call Weather.getCurrentWeather
+     * @param mood "Very Positive", "Positive", "Neutral", "Negative", or "Very Negative". hint: call MoodAnalyzer.analyze(content)
+     * @param weather "Sunny", "Rainy", "Hazy", or "Thunderstorms". hint: call Weather.getCurrentWeather
      */
     public static void editEntry(String id, LocalDate date, String content, String mood, String weather) {
         currentUser.getEntries().editEntry(id, date, content, mood, weather);
     }
 
+    /**
+     * Demonstrate the use of this class.
+     */
     static void main(String[] args) {
         System.out.println("Active: " + hasActiveUser());
         //signup("cha", "ahcha@gmail.com", "verysecurepassword");
